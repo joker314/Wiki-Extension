@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener(function(selection, sender, reply){
 			let copyArea = document.createElement("textarea");
 			let user = rightClickedElement.parentElement.getElementsByClassName("name")[0].children[0].innerText;
 			let date = new Date(rightClickedElement.nextElementSibling.getElementsByClassName("time")[0].title);
-			let url = location.protocol + "// " + location.hostname + location.pathname + "#" + rightClickedElement.parentElement.parentElement.id;
+			let url = location.protocol + "//" + location.hostname + location.pathname + "#" + rightClickedElement.parentElement.parentElement.id;
 			copyArea.value = `${user} (${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}) "${selection}" ${url}`;
 			rightClickedElement.appendChild(copyArea);
 			copyArea.focus();
