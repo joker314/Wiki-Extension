@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Citing comments for the Wiki",
+  "version": "1.0",
+  "content_scripts": [
+	{
+		"matches": ["https://scratch.mit.edu/*"],
+		"js": ["content.js"]
+	}
+  ],
+  "background": {
+	"scripts": ["background.js"]
+  },
+  "permissions": ["contextMenus", "https://scratch.mit.edu/*"]
+}
